@@ -43,7 +43,7 @@ PackageItSampleModule
     :alt: GitHub Actions - CI
     :target: https://github.com/hendrikdutoit/PackageItSampleModule/actions/workflows/ci.yaml
 
-.. image:: https://img.shields.io/pypi/v/PackageItSampleModule
+.. image:: https://img.shields.io/testpypi/v/PackageItSampleModule
     :alt: PyPi
 
 Project Short Description (default ini)
