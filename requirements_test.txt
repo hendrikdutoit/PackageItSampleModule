@@ -20,3 +20,4 @@ sphinx-autobuild
 sphinx
 termcolor
 twine
+build

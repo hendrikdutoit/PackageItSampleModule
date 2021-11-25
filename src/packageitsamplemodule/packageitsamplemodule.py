@@ -6,12 +6,10 @@ Project long description or extended summary goes in here (default ini)
 import logging
 from pathlib import Path
 from termcolor import colored
-from beetools.beearchiver import Archiver
+from beetools import beearchiver, beeutils
 
 _PROJ_DESC = __doc__.split("\n")[0]
 _PROJ_PATH = Path(__file__)
-_PROJ_NAME = _PROJ_PATH.stem
-_PROJ_VERSION = "0.0.1"
 
 
 class PackageItSampleModule:
@@ -20,7 +18,7 @@ class PackageItSampleModule:
     Class multi-liner detail description goes here.
     """
 
-    def __init__(self, p_parent_log_name, p_logger=False, p_verbose=True):
+    def __init__(self, p_project_name, p_dir, p_parent_log_name="", p_verbose=True):
         """Initialize the class
 
         Parameters
@@ -44,15 +42,16 @@ class PackageItSampleModule:
 
         Examples
         --------
-        # No proper doctest (<<<) because it is os dependent
         """
         self.success = True
-        if p_logger:
-            self.log_name = "{}.{}".format(p_parent_log_name, _PROJ_NAME)
+        if p_parent_log_name:
+            self.log_name = "{}.{}".format(p_parent_log_name, PackageItSampleModule)
             self.logger = logging.getLogger(self._log_name)
+        self.project_name = p_project_name
+        self.dir = p_dir
         self.verbose = p_verbose
 
-    def method_1(self):
+    def method_1(self, p_msg):
         """Method short description one-liner goes here.
 
         Class multi-liner detail description goes here.
@@ -71,9 +70,10 @@ class PackageItSampleModule:
 
         Examples
         --------
-        # No proper doctest (<<<) because it is os dependent
+
         """
-        print(colored("Testing PackageItSampleModule...", "yellow"))
+        print(colored("Testing {}...".format(self.project_name), "yellow"))
+        print(colored("Message: {}".format(p_msg), "yellow"))
         return True
 
 
@@ -91,6 +91,8 @@ def do_examples(p_cls=True):
 
     Returns
     -------
+    success : boolean
+        Execution status of the examples.
 
     See Also
     --------
@@ -100,16 +102,17 @@ def do_examples(p_cls=True):
 
     Examples
     --------
-    # No proper doctest (<<<) because it is os dependent
+
     """
-    do_example1(p_cls)
-    do_example2(p_cls)
+    success = do_example1(p_cls)
+    success = do_example2(False) and success
+    return success
 
 
 def do_example1(p_cls=True):
     """A working example of the implementation of PackageItSampleModule.
 
-    Example1 illutrate the following concepts:
+    Example1 illustrate the following concepts:
     1. Bla, bla, bla
     2. Bla, bla, bla
 
@@ -120,6 +123,8 @@ def do_example1(p_cls=True):
 
     Returns
     -------
+    success : boolean
+        Execution status of the example
 
     See Also
     --------
@@ -129,14 +134,16 @@ def do_example1(p_cls=True):
 
     Examples
     --------
-    # No proper doctest (<<<) because it is os dependent
+
     """
     success = True
-    t1_archiver = Archiver(_PROJ_NAME, _PROJ_VERSION, _PROJ_DESC, _PROJ_PATH)
-    t1_archiver.print_header(p_cls=p_cls)
-    t1_packageitsamplemodule = PackageItSampleModule(_PROJ_NAME)
-    t1_packageitsamplemodule.method_1()
-    t1_archiver.print_footer()
+    archiver = beearchiver.Archiver(_PROJ_DESC, _PROJ_PATH)
+    archiver.print_header(p_cls=p_cls)
+    t_dir = beeutils.get_tmp_dir()
+    t_packageitsamplemodule = PackageItSampleModule("PackageItSampleModule", t_dir)
+    t_packageitsamplemodule.method_1("This is do_example1")
+    beeutils.rm_tree(t_dir)
+    archiver.print_footer()
     return success
 
 
@@ -154,6 +161,8 @@ def do_example2(p_cls=True):
 
     Returns
     -------
+    success : boolean
+        Execution status of the method
 
     See Also
     --------
@@ -163,14 +172,16 @@ def do_example2(p_cls=True):
 
     Examples
     --------
-    # No proper doctest (<<<) because it is os dependent
+
     """
     success = True
-    t2_archiver = Archiver(_PROJ_NAME, _PROJ_VERSION, _PROJ_DESC, _PROJ_PATH)
-    t2_archiver.print_header(p_cls=p_cls)
-    t2_packageitsamplemodule = PackageItSampleModule(_PROJ_NAME)
-    t2_packageitsamplemodule.method_1()
-    t2_archiver.print_footer()
+    archiver = beearchiver.Archiver(_PROJ_DESC, _PROJ_PATH)
+    archiver.print_header(p_cls=p_cls)
+    t_dir = beeutils.get_tmp_dir()
+    t_packageitsamplemodule = PackageItSampleModule("PackageItSampleModule", t_dir)
+    t_packageitsamplemodule.method_1("This is do_example2")
+    beeutils.rm_tree(t_dir)
+    archiver.print_footer()
     return success
 
 

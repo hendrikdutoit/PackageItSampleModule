@@ -34,12 +34,12 @@
     :alt: GitHub Actions - CI
     :target: https://github.com/hendrikdutoit/PackageItSampleModule/actions/workflows/ci.yaml
 
-.. image:: https://img.shields.io/pypi/v/PackageItSampleModule
+.. image:: https://img.shields.io/testpypi/v/PackageItSampleModule
     :alt: PyPi
 
-Multi source file project
+Project Short Description (default ini)
 
-    This still has to be sorted. See "PackageIt.create_readme"
+    Project long description or extended summary goes in here (default ini)
 
 =======
 Testing
