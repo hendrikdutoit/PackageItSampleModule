@@ -25,7 +25,7 @@ PackageItSampleModule
 .. image:: https://img.shields.io/github/issues-raw/hendrikdutoit/PackageItSampleModule
     :alt: GitHub issues
 
-.. image:: https://img.shields.io/pypi/dm/BEETest21
+.. image:: https://img.shields.io/pypi/dm/PackageItSampleModule
     :alt: PyPI - Downloads
 
 .. image:: https://img.shields.io/github/search/hendrikdutoit/PackageItSampleModule/GitHub hit
@@ -43,7 +43,7 @@ PackageItSampleModule
     :alt: GitHub Actions - CI
     :target: https://github.com/hendrikdutoit/PackageItSampleModule/actions/workflows/ci.yaml
 
-.. image:: https://img.shields.io/testpypi/v/PackageItSampleModule
+.. image:: https://img.shields.io/pypi/v/PackageItSampleModule
     :alt: PyPi
 
 Project Short Description (default ini)
