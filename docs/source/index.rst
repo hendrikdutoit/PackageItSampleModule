@@ -76,7 +76,3 @@ Usage
     examples
     faq
 
--------------
-Version 0.0.2
--------------
-THis is really version 0.0.2
