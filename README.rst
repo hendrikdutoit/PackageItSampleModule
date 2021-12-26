@@ -19,7 +19,7 @@
 .. image:: https://img.shields.io/pypi/dm/PackageItSampleModule
     :alt: PyPI - Downloads
 
-.. image:: https://img.shields.io/github/search/hendrikdutoit/PackageItSampleModule/GitHub hit
+.. image:: https://img.shields.io/github/search/hendrikdutoit/PackageItSampleModule/GitHub
     :alt: GitHub Searches
 
 .. image:: https://img.shields.io/codecov/c/gh/hendrikdutoit/PackageItSampleModule
@@ -37,9 +37,9 @@
 .. image:: https://img.shields.io/testpypi/v/PackageItSampleModule
     :alt: PyPi
 
-Multi source file project
+Project Short Description (default ini)
 
-    This still has to be sorted. See "PackageIt.create_readme"
+    Project long description or extended summary goes in here (default ini)
 
 =======
 Testing
@@ -51,7 +51,7 @@ Install the test dependencies.
 
 .. code-block:: bash
 
-    $ pip install - r requirements_test.txt
+    $ pip install -r requirements_test.txt
 
 Run the tests.
 

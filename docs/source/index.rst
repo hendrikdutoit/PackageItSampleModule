@@ -28,7 +28,7 @@ PackageItSampleModule
 .. image:: https://img.shields.io/pypi/dm/PackageItSampleModule
     :alt: PyPI - Downloads
 
-.. image:: https://img.shields.io/github/search/hendrikdutoit/PackageItSampleModule/GitHub hit
+.. image:: https://img.shields.io/github/search/hendrikdutoit/PackageItSampleModule/GitHub
     :alt: GitHub Searches
 
 .. image:: https://img.shields.io/codecov/c/gh/hendrikdutoit/PackageItSampleModule

@@ -1,5 +1,20 @@
+[0.0.3]
+Title = "Version 0.0.3"
+Description = [ "Version 0.0.1", "Messing around with package structures",]
+
+[0.0.2]
+Title = "Version 0.0.2"
+Description = [ "Version 0.0.1", "Mesing around with package structures",]
+FileChanges = [ [ "setup.cfg", "Change addopts for doctest.",],]
+
+[0.0.1]
+Version = "0.0.1"
+Title = "Version 0.0.1"
+Description = [ "Fix PyTest addopts", "The addopts for PyTest is problematic.  If doctest is included in the options in the debugger, the debugger does not stop.  It therefore requires a switch when jumping between debugging and commandline testing",]
+FileChanges = [ [ "setup.cfg", "Change addopts for doctest.",],]
+
 [0.0.0]
 Version = "0.0.0"
-Title = "Creation of the project"
-Description = [ "List all the changes to the project here.", "Changes listed here will be in the release notes under the above heading.",]
+Title = "Version 0.0.0"
+Description = [ "Creation of the project", "List all the changes to the project here.", "Changes listed here will be in the release notes under the above heading.",]
 FileChanges = [ [ "filename01.py", "Insert change description here.",], [ "filename02.txt", "Insert change description here.",],]
